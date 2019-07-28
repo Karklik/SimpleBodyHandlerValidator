@@ -37,7 +37,7 @@ public class Example {
         HttpResponse response = null;
         try {
             response = client.send(request, responseInfo ->
-                    SimpleBodyHandlerValidator.newBuilder(HttpResponse.BodyHandlers.discarding())
+                    SimpleBodyHandlerValidator.newBuilder(HttpResponse.BodyHandlers.ofString())
                             .allowedStatusCode(200)
                             .requiredHeader("Content-Type",
                                     Collections.singletonList("text/html; charset=utf-8"))
