@@ -19,7 +19,7 @@ public class Example {
         HttpResponse response = null;
         try {
             response = client.send(request, responseInfo ->
-                    SimpleBodyHandlerValidator.newBuilder(HttpResponse.BodyHandlers.discarding())
+                    SimpleResponseInfoValidator.newBuilder(HttpResponse.BodyHandlers.discarding())
                             .allowedStatusCode(200)
                             .requiredHeader("Content-Type",
                                     Collections.singletonList("text/html; charset=utf-8"))

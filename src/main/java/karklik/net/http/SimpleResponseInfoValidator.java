@@ -12,7 +12,7 @@ import java.util.Optional;
 import java.util.Set;
 
 @Builder(builderMethodName = "newBuilder")
-public class SimpleBodyHandlerValidator<T> implements HttpResponse.BodyHandler<T> {
+public class SimpleResponseInfoValidator<T> implements HttpResponse.BodyHandler<T> {
     @NonNull
     private final HttpResponse.BodyHandler<T> handler;
     @Singular
@@ -21,8 +21,8 @@ public class SimpleBodyHandlerValidator<T> implements HttpResponse.BodyHandler<T
     private Map<String, List<String>> requiredHeaders;
     private HttpClient.Version expectedVersion;
 
-    public static <T> SimpleBodyHandlerValidatorBuilder<T> newBuilder(HttpResponse.BodyHandler<T> handler) {
-        SimpleBodyHandlerValidatorBuilder<T> builder = new SimpleBodyHandlerValidatorBuilder<T>();
+    public static <T> SimpleResponseInfoValidatorBuilder<T> newBuilder(HttpResponse.BodyHandler<T> handler) {
+        SimpleResponseInfoValidatorBuilder<T> builder = new SimpleResponseInfoValidatorBuilder<T>();
         builder.handler(handler);
         return builder;
     }
