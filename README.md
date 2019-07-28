@@ -10,7 +10,7 @@ In case of unfulfilled assumptions `java.io.IOException` will be thrown, with on
 ## Getting Started
 ### Prerequisites
 * Gradle
-* JavaJDK 11+
+* JavaJDK 12+
 
 ### Building
 `gradle build` > jar should be generated in default build directory i.e. `build/libs/SimpleBodyHandlerValidator-1.0.jar`
