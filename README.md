@@ -1,5 +1,5 @@
 # SimpleResponseInfoValidator
-It is simple wrapping builder class for `java.net.http.HttpResponse.BodyHandler<T>` which allows do assertion if incoming http response have desired status code, headers or protocol version before receiving full http response.
+It is simple wrapping builder class for `java.net.http.HttpResponse.BodyHandler<T>` which allows do validation if incoming http response have desired status code, headers or protocol version before receiving full http response.
 ```
 A BodyHandler is a function that takes a ResponseInfo object; and which returns a BodySubscriber. The BodyHandler is invoked when the response status code and headers are available, but before the response body bytes are received. 
 ```
